@@ -12,14 +12,31 @@
       <h1>Date</h1>
     </div>
     <div class="list-container">
+      <% if (locals.items) { %> <%items.forEach((task)=> { %>
       <div class="list-item">
-        <input type="checkbox" name="" id="" />
-        <p>List item</p>
+        <input
+          id="check"
+          type="checkbox"
+          name="check"
+          onclick="check('check','yesno')"
+        />
+        <label id="text" for="check" name="yesno"><%=task %></label>
       </div>
-      <form action="post">
-        <input type="text" name="" id="New Item" />
-        <input type="submit" value="+" />
+      <%}) %> <% } %>
+
+      <form action="/submit" method="POST" class="form">
+        <div class="inputs-container">
+          <input
+            type="text"
+            name="task"
+            id="New Item"
+            placeholder="New Item"
+            class="new-item"
+          />
+          <input type="submit" value="+" class="submit" />
+        </div>
       </form>
     </div>
   </body>
+  <script></script>
 </html>

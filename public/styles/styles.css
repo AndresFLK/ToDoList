@@ -1,3 +1,107 @@
-body{
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Pacifico&family=Public+Sans:wght@800&family=Roboto&family=Space+Grotesk:wght@700&family=Yellowtail&display=swap');
+
+html {
+    --s: 60px; /* control the size */
+    
+    --_g: #0000 83%,#b09f79 85% 99%,#0000 101%;
+    background:
+      radial-gradient(27% 29% at right ,var(--_g)) calc(var(--s)/ 2) var(--s),
+      radial-gradient(27% 29% at left  ,var(--_g)) calc(var(--s)/-2) var(--s),
+      radial-gradient(29% 27% at top   ,var(--_g)) 0 calc(var(--s)/ 2),
+      radial-gradient(29% 27% at bottom,var(--_g)) 0 calc(var(--s)/-2)
+      #476074;
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+  }
+
+.date-container{
+    display: flex;
+    height: 7rem;
+    width: 30%;
+    margin: 5% auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+h1{
+    color: #121212;
+    font-family: 'Pacifico';
+}
+
+.list-container{
+    display: flex;
+    flex-direction: column;
+    width: 26%;
+    margin: 5% auto;
+    padding: 2%;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.list-item{
+    display: flex;
+    padding: 2%;
+    align-items: center;
+    background-color: rgb(71,96,116);
+    border: 1px solid black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.list-item input{
+    width: 25px;
+    height: 25px;
+}
+
+label{
+    padding-left: 1%;
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+}
+
+.form{
+    margin-top: 5%;
+    padding: 3%;
+    align-items: center;
+    background-color: rgb(71,96,116);
+    border: 1px solid black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.inputs-container{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-item{
+    width: 80%;
+    height: 30px;
+    border: 1px solid black;
+    padding: 2%;
+    color: #121212;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+}
+
+.new-item::placeholder{
+    color: #121212a2;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+}
+
+.submit{
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    color: #121212;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+}
+
+
+
