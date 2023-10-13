@@ -71,6 +71,11 @@ label{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+input:checked+label {
+    text-decoration: line-through;
+    text-decoration-color: #B09F79;
+  }
+
 .inputs-container{
     margin: auto;
     width: 90%;
