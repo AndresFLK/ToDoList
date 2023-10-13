@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="date-container">
-      <h1>Date</h1>
+      <h1>Data</h1>
     </div>
     <div class="list-container">
       <% if (locals.items) { %> <%items.forEach((task)=> { %>
@@ -18,9 +18,9 @@
           id="check"
           type="checkbox"
           name="check"
-          onclick="check('check','yesno')"
+          onclick="yesno('check','text');"
         />
-        <label id="text" for="check" name="yesno"><%=task %></label>
+        <label id="text" for="check" name="text"><%=task %></label>
       </div>
       <%}) %> <% } %>
 
@@ -38,5 +38,15 @@
       </form>
     </div>
   </body>
-  <script></script>
+  <script>
+    function yesno(thecheckbox, thelabel) {
+      var checkboxvar = document.getElementById(thecheckbox);
+      var labelvar = document.getElementById(thelabel);
+      if (!checkboxvar.checked) {
+        labelvar.classList.toggle("checked");
+      } else {
+        labelvar.classList.toggle("checked");
+      }
+    }
+  </script>
 </html>

@@ -103,5 +103,7 @@ label{
     font-size: 1.5rem;
 }
 
-
+.checked{
+    text-decoration: line-through;
+}
 

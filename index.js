@@ -1,6 +1,8 @@
 import bodyParser from "body-parser";
 import express from "express";
 
+
+
 const app = express();
 const port = 3000;
 var task = "";
@@ -13,28 +15,11 @@ function addItem(req, res, next){
   task = req.body["task"];
   if (task != undefined){
     taskList.push(task);
-  }
+  };
   next();
 };
 
 app.use(addItem);
-
-function check(thecheckbox, thelabel,next) {
-  var checkboxvar = document.getElementById(thecheckbox);
-  var labelvar = document.getElementById(thelabel);
-  if (!checkboxvar.checked) {
-      labelvar.innerHTML = "No";
-  }
-  else {
-      labelvar.innerHTML = "Yes";
-  }
-  next();
-};
-
-app.use(check);
-
-
-
 
 app.get("/", (req, res) => {
   
